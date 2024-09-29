@@ -9,7 +9,7 @@ def get_gemini_response(input_text,image_data,prompt):
     return response.text
 def input_image_details(uploaded_file):
     if uploaded_file is not None:
-        bytes_data = uploaded_file.getvalue()
+        bytes_data = uploaded_file.read()
         image_parts =[
             {
                 "mime_type": uploaded_file.type,
